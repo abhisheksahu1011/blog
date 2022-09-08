@@ -1,37 +1,28 @@
-import { BrowserRouter, Route, Routes} from "react-router-dom";
-import NavBar from "./Component/NavBar";
-import Home from "./Pages/Home"
-import Hollywood from "./Pages/Hollywood"
-import Bollywood from "./Pages/Bollywood"
-import Technology from "./Pages/Technology"
-import Fitness from "./Pages/Fitness"
-import Food from "./Pages/Food"
-import SinglePage from "./Pages/SinglePage";
-import './Style.css'
-import Detail from "./Pages/Detail";
+import React from 'react'
+import UseEffect from './Components/UseEffect'
+import UseState from './Components/UseState'
+import UseReducer  from './Components/UseReducer'
+import Usememo from './Components/Usememo'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Detail>
-      <BrowserRouter>
-      <NavBar />
-      <Routes>
-      
-        <Route path="/" element = {<Home />} /> 
-        <Route path="/bollywood" element = {<Bollywood />} />
-         <Route path="/hollywood" element = {<Hollywood />} /> 
-         <Route path="/technology" element = {<Technology />} /> 
-        <Route path="/fitness" element = {<Fitness />} /> 
-         <Route path="/food" element = {<Food />} /> 
-         <Route path=":category/:articleid" element = {<SinglePage/>}/> 
-      </Routes>
-      </BrowserRouter>
-      </Detail>
+    <>
+       <UseState/>
+       <UseEffect/>
+       <UseReducer/>
+       <Usememo/>
+    </>
+ 
+   
+   
 
-
-    </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+//     Difference between Axios and fetch
+// What is UseState Hook ?(Implementation)
+// What is useEffect Hook ?(Implementation)
+// What is UseReducer Hook ?(Implementation)
+// What is UseMemo Hook ?(Implementation)
